@@ -190,6 +190,10 @@ Message: ${message}`;
       isRunning = false;
     }, 2500);
   }
+  function toggleChat() {
+  const chat = document.getElementById("chatBox");
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
 
   window.addEventListener("resize", resizeCanvas);
   resizeCanvas();
