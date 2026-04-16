@@ -656,6 +656,71 @@ textarea:focus {
   gap: 2rem;
   align-items: start;
 }
+.footer-logo {
+  position: fixed; /* stays floating */
+  bottom: 15px; /* neat spacing from bottom */
+  left: 15px; /* neat spacing from left */
+  z-index: 1000; /* stays above other elements */
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 45px; /* smaller, clean size */
+  height: auto;
+  vertical-align: middle;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.15); /* subtle zoom on hover */
+  opacity: 0.9; /* slight fade for effect */
+}
+
+.footer-logo p {
+  font-size: 11px; /* neat, readable text */
+  line-height: 1.3;
+  margin-top: 4px;
+  color: #ccc; /* softer text color for contrast */
+}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .footer-logo {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .footer-logo img {
+    max-width: 38px; /* even smaller for mobile */
+  }
+
+  .footer-logo p {
+    font-size: 9px;
+    color: #aaa;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-logo {
+    bottom: 8px; /* closer to bottom edge */
+    left: 8px; /* tighter to the side */
+  }
+
+  .footer-logo img {
+    max-width: 50px; /* smaller logo for mobile */
+  }
+
+  .footer-logo p {
+    display: block;
+    text-align: center;
+    font-size: 9px; /* neat, compact text */
+    line-height: 1.2;
+    margin-top: 3px; /* minimal spacing */
+    color: #666; /* softer tone for readability */
+  }
+}
 
 .legal {
   padding-top: 1.4rem;
